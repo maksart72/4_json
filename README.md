@@ -1,10 +1,15 @@
 # Prettify JSON
 
-[TODO. There will be project description]
+Задача состоит в том, чтобы написать скрипт, который на вход принимает путь до файла, в котором хранится json и выводит его содержимое в консоль в удобном для чтения виде. 
+
+Описание.
+
+Путь до файла с содержимым JSON получаем через переменную filepath и функцию sys.argv
+Функция load_data(filepath) - загружает содержимое файла
+Функция pretty_print_json(data) - преобразует данные с помощью функции json.dumps в удобный вид
+Результат преобразования выводится в консоль через print 
 
 # Quickstart
-
-[TODO]
 
 Example of script launch on Linux, Python 3.5:
 
