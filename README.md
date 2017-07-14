@@ -1,13 +1,6 @@
 # Prettify JSON
 
-Задача состоит в том, чтобы написать скрипт, который на вход принимает путь до файла, в котором хранится json и выводит его содержимое в консоль в удобном для чтения виде. 
-
-Описание.
-
-Путь до файла с содержимым JSON получаем через переменную filepath и функцию sys.argv
-Функция load_data(filepath) - загружает содержимое файла
-Функция pretty_print_json(content) - преобразует данные с помощью функции json.dumps в удобный вид
-Результат преобразования выводится в консоль через print 
+This script prints to the console the raw JSON file in user-friendly format.
 
 # Quickstart
 
@@ -16,7 +9,67 @@ Example of script launch on Linux, Python 3.5:
 ```#!bash
 
 $ python pprint_json.py <path to file>
-# TODO add output example
+
+You will see for example:
+
+[
+    {
+        "Id": "79742784-9ef3-4543-bc98-a219a8903c18",
+        "Number": 1,
+        "Cells": {
+            "global_id": 14371450,
+            "Name": "Ароматный Мир",
+            "IsNetObject": "да",
+            "OperatingCompany": "Ароматный Мир",
+            "TypeService": "реализация продовольственных товаров",
+            "AdmArea": "Западный административный округ",
+            "District": "район Кунцево",
+            "Address": "улица Академика Павлова, дом 10",
+            "PublicPhone": [
+                {
+                    "PublicPhone": "(495) 777-51-95"
+                }
+            ],
+            "WorkingHours": [
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "понедельник"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "вторник"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "среда"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "четверг"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "пятница"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "суббота"
+                },
+                {
+                    "Hours": "09:30-22:30",
+                    "DayOfWeek": "воскресенье"
+                }
+            ],
+            "ClarificationOfWorkingHours": null,
+            "geoData": {
+                "type": "Point",
+                "coordinates": [
+                    37.39703804817934,
+                    55.740999719549094
+                ]
+            }
+        }
+    },
 
 ```
 

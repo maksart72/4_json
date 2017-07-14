@@ -1,17 +1,19 @@
-import json, sys
+import json
+import sys
+import os
 
-filepath = sys.argv[1]
 
 def load_json_file(filepath):
-    fo = open(filepath)
-    str = fo.read()
-    json_raw = json.loads(str)
-    return json_raw
+    if not os.path.exists(filepath):
+        return None
+    with open(filepath, 'r') as file_handler:
+        return json.load(file_handler)
 
-def pretty_print_json(content):
-    content = json.dumps(content, ensure_ascii = False, indent=4)
-    return content
+def pretty_print_json(json_content):
+    pretty_json = json.dumps(json_content, ensure_ascii=False, indent=4)
+    print(pretty_json)
 
 if __name__ == '__main__':
-    content = load_json_file(filepath)
-    print(pretty_print_json(content))
+    FILE_IS = sys.argv[1]
+    RAW_JSON = load_json_file(FILE_IS)
+    pretty_print_json(RAW_JSON)
