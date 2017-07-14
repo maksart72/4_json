@@ -14,6 +14,6 @@ def pretty_print_json(json_content):
     print(pretty_json)
 
 if __name__ == '__main__':
-    FILE_IS = sys.argv[1]
-    RAW_JSON = load_json_file(FILE_IS)
-    pretty_print_json(RAW_JSON)
+    FILE = sys.argv[1]
+    RAWJSON = load_json_file(FILE)
+    pretty_print_json(RAWJSON)
