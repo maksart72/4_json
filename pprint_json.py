@@ -14,6 +14,14 @@ def pretty_print_json(json_content):
     print(pretty_json)
 
 if __name__ == '__main__':
-    filename = sys.argv[1]
+    if len(sys.argv) == 1:
+        print('Usage: python pprint_json.py <path to file>')
+        sys.exit(1)
+    else:
+        filename =  sys.argv[1]
     rawjson = load_json_file(filename)
-    pretty_print_json(rawjson)
+    if not rawjson:
+        print('Can not load JSON file')
+        sys.exit(1)
+    else:
+        pretty_print_json(rawjson)
